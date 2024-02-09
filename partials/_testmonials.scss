@@ -1,0 +1,65 @@
+.swiper {
+    width: $container-lg;
+
+    .swiper-wrapper {
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // gap: 2rem;
+        margin-bottom: 4rem;
+
+
+
+        .swiper-slide {
+            // display: none;
+
+            @include gradientBackground;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            cursor: default;
+            font-size: 0.9rem;
+            padding: 1.5rem;
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            .patient {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                .avatar {
+                    width: 2.5rem;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+
+
+        }
+
+    }
+
+    .swiper-pagination-bullet {
+        background: $primary-color;
+    }
+}
+
+// Media Queies Small
+@media screen and(max-width: 600px) {
+    .swiper {
+        .swiper-wrapper {
+            .swiper-slide {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
